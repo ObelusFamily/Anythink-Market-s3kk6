@@ -3,6 +3,7 @@ from typing import List, Optional
 from app.models.common import DateTimeModelMixin, IDModelMixin
 from app.models.domain.profiles import Profile
 from app.models.domain.rwmodel import RWModel
+from pydantic import BaseModel, Field
 
 
 class Item(IDModelMixin, DateTimeModelMixin, RWModel):
@@ -15,3 +16,4 @@ class Item(IDModelMixin, DateTimeModelMixin, RWModel):
     favorites_count: int
     image: Optional[str]
     body: Optional[str]
+
